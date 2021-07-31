@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(185, 75%, 39%);
+  --color-primary-dark: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  background: url(/images/bg-pattern-top.svg) no-repeat;
+  position: absolute;
+  top: -15rem;
+  left: -45rem;
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg);
+}
+.container::after {
+  content: "";
+  background: url(/images/bg-pattern-bottom.svg) no-repeat;
+  position: absolute;
+  bottom: -30rem;
+  right: -80rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  width: 40rem;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card__banner {
+  height: 20rem;
+
+  background: url(images/bg-pattern-card.svg) no-repeat;
+  background-size: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+.heading-para,
+.para,
+.location {
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+.location {
+  margin-bottom: 4rem;
+}
+
+.para,
+.location {
+  font-size: 1.4rem;
+}
+
+.profile-stats {
+  align-self: stretch;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
